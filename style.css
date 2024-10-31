@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d6ecff;
+}
+
+#logomenu {
+    width: 100px;
+    height: 90px;
+    margin: -18px -50px 0px 20px;
+}
+
+#menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.164), transparent);
+    margin-top: 25px;
+}
+
+.linkmenu {
+    font-weight: 100;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 120px 0 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.linkmenu:hover {
+    font-size: 19px;
+    transition: 0.3s;
+    color: #2db1e6;
+}
+
+#txt {
+    margin-bottom: -100px;
+    align-items: center;
+    color: white;
+}
+
+#botao {
+    text-align: center;
+    margin: 80px 0 0;
+}
+
+h3 {
+    margin: 110px 0 0;
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#cadastro {
+    text-align: center;
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    background-color: #78bdf577;
+    font-size: 20px;
+    font-weight: 100;
+    border-color: transparent;
+}
+
+#cadastro:hover {
+    background-color: #349ff7;
+    height: 52px;
+    width: 201px;
+    font-size: 21px;
+    transition: 0.5s;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+}
+
+section:nth-of-type(1) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.233), transparent, transparent, transparent, rgba(255, 255, 255, 0.295), rgba(255, 255, 255, 0.979)), url("imagens/fundoazul.jpeg");
+    width: 100%;
+    height: 300px;
+}
+
+#container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    position: absolute;
+    top: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#div1, #div2, #div3 {
+    width: 290px;
+    height: 300px;
+    padding: 10px;
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+#div1 {
+    background: linear-gradient(to bottom, transparent, #78BDF5, #78BDF5);
+}
+
+#div2 {
+    background: linear-gradient(to bottom, transparent, #78E3F4);
+}
+
+#div3 {
+    background: linear-gradient(to bottom, transparent, #98d8e2);
+}
+
+#div1:hover, #div2:hover, #div3:hover {
+    width: 300px;
+    transition: 1s;
+}
+
+#textodiv {
+    max-width: 210px;
+}
+
+#texto1 {
+    margin: 120px 0 0 155px;
+    width: 400px;
+}
+
+#titulo1 {
+    font-size: 30px;
+    padding: 0 0 0 30px;
+    color: #82baff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#grafico2 {
+    margin: -400px 100px 0;
+    float: right;
+    position: relative;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1d487c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    #menu {
+        padding: 0 10px;
+    }
+    .linkmenu {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    #cadastro {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    #logomenu {
+        width: 80px;
+        height: 70px;
+        margin: -10px -30px 0 10px;
+    }
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #div1, #div2, #div3 {
+        width: 90%;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #cadastro {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .linkmenu {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    #cadastro {
+        width: 140px;
+        font-size: 18px;
+    }
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
