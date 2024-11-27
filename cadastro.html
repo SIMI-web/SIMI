@@ -6,7 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro.css">
     <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
-        <title>Formulário de cadastro</title>
+    <title>Formulário de cadastro</title>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const number = document.getElementById('number').value.trim();
+            const inscribeType = document.getElementById('inscribe-type').value;
+
+            if (fullname === "") {
+                alert("Por favor, insira o nome completo.");
+                return false;
+            }
+
+            if (email === "" || !email.includes("@")) {
+                alert("Por favor, insira um e-mail válido.");
+                return false;
+            }
+
+            if (number === "" || !/^\(\d{2}\)\s?\d{4,5}-\d{4}$/.test(number)) {
+                alert("Por favor, insira um número de telefone no formato (XX) XXXX-XXXX.");
+                return false;
+            }
+
+            if (inscribeType === "- Selecione -") {
+                alert("Por favor, selecione um tipo de inscrição.");
+                return false;
+            }
+
+            // Se todas as validações passarem
+            alert("Formulário enviado com sucesso!");
+            return true;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -14,13 +48,13 @@
             <img src="imagens/cadastro.png">
         </div>
         <div class="form">
-            <form action="#">
+            <form onsubmit="return validateForm(event)">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="reset-button">
-                        <input type="reset">
+                        <input type="reset" value="Limpar">
                     </div>
                 </div>
                 <div class="input-group">
@@ -41,7 +75,7 @@
 
                     <div class="input-box">
                         <label for="birthday">Data de nascimento</label>
-                        <input id="birthday" type="data" name="birthday" placeholder="DD/MM/AAAA" required>
+                        <input id="birthday" type="date" name="birthday" placeholder="DD/MM/AAAA" required>
                     </div>
                 </div>
                 <div class="gender-inputs">
@@ -68,7 +102,7 @@
                     </div>
                 </div>
                 <div class="select">
-                    <label for="options">Tipo de inscrição</label>
+                    <label for="inscribe-type">Tipo de inscrição</label>
                     <br>
                     <select id="inscribe-type" name="inscribe-type">
                         <option selected hidden>- Selecione -</option>
@@ -83,7 +117,7 @@
                     </div>
                 </div>
                 <div class="send-button">
-                    <button><a href="#">Enviar dados</a></button>
+                    <button type="submit">Enviar dados</button>
                 </div>    
             </form>
         </div>
