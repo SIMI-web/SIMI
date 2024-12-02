@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #d6ecff;
 }
@@ -19,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.164), transparent);
+    background: linear-gradient(to bottom, transparent, rgba(133, 237, 255, 0.164), transparent);
     margin-top: 25px;
 }
 
@@ -47,6 +51,7 @@ body {
 #botao {
     text-align: center;
     margin: 80px 0 0;
+    cursor: pointer;
 }
 
 h3 {
@@ -245,6 +250,76 @@ line-height: 25px;
 
 }
 
+#depoimentos{
+    text-align: left;
+    color: white;
+    padding: 40px 0px 0px 80px;
+    font-size: 50px;
+    font-weight: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#container3 {
+    width: 100%;
+    height: 400px; /* Alterado para auto para que as divs se ajustem */
+    display: flex;
+    justify-content: space-around; /* Para distribuir as divs uniformemente */
+    margin: 50px 0px 50px 0px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.comentario {
+    margin: 10px 50px 0px 20px; /* Margem entre as divs */
+    width: 355px;
+    height: 250px;
+    background-color: #2db1e6;
+    color: white;
+    padding: 0px 0px 0px 0px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.096);
+    transition: background-color 1s, width 1s; /* Mover transições para cá */
+    justify-content: center;
+    text-align: center;
+    padding: 60px 15px 0px 0px;
+    align-items: center;
+    min-width: 300px;
+    animation: slide 65s infinite; /* Animação cíclica */
+}
+
+.comentario::after {
+    content: "★★★★★"; /* Adiciona as estrelas */
+    font-size: 1.5rem; /* Tamanho das estrelas */
+    color: #000ba0; 
+    letter-spacing: 5px; 
+    position: absolute;
+    top: 15px; 
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+
+
+.textocomentario{
+max-width: 200px;
+text-align:center;
+line-height: 25px;
+font-weight: 500;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes slide {
+    0%, 11.11% { transform: translateX(500px); } 
+    11.11%, 22.22% { transform: translateX(-360px); } 
+    22.22%, 33.33% { transform: translateX(-720px); } 
+    33.33%, 44.44% { transform: translateX(-1080px); } 
+    44.44%, 55.55% { transform: translateX(-1440px); } 
+    55.55%, 66.66% { transform: translateX(-1800px); } 
+    66.66%, 77.77% { transform: translateX(-2160px); }
+    77.77%, 88.88% { transform: translateX(-2520px); } 
+    88.88%, 100% { transform: translateX(-2880px); } 
+}
 
 /* Rodapé */
 footer {
@@ -259,58 +334,43 @@ footer {
 
 
 
-/* Estilos responsivos */
-@media (max-width: 1200px) {
-    #menu {
-        padding: 0 10px;
-    }
-    .linkmenu {
-        padding: 10px 20px;
-        font-size: 18px;
-    }
-    h3 {
-        font-size: 40px;
-    }
-    #cadastro {
-        width: 180px;
-    }
-}
 
-@media (max-width: 768px) {
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     #logomenu {
-        width: 80px;
-        height: 70px;
-        margin: -10px -30px 0 10px;
+        width: 0dvw;  /* Ajuste da logo para telas pequenas */
     }
-    #container {
-        flex-direction: column;
-        align-items: center;
+
+    #menu {
+        height: auto;
+        padding: 0 5vw;
+        display: flex;
+        margin-left: -50px;
     }
-    #div1, #div2, #div3 {
-        width: 90%;
+
+    .linkmenu {
+        font-size: 0.9rem;
+        padding: 10px 0;
+        text-align: center;
     }
+
     h3 {
-        font-size: 30px;
+        font-size: 6vw;
     }
+
     #cadastro {
-        width: 160px;
+        width: 70%;
+        font-size: 0.1 rem;
+    }
+
+    #cadastro:hover {
+        font-size: 0.2 rem;
     }
 }
 
-@media (max-width: 480px) {
-    .linkmenu {
-        font-size: 16px;
-        padding: 5px 10px;
-    }
-    h3 {
-        font-size: 24px;
-    }
-    #cadastro {
-        width: 140px;
-        font-size: 18px;
-    }
-    #menu {
-        flex-direction: column;
-        align-items: center;
-    }
-}
