@@ -392,7 +392,7 @@ footer {
     }
     #sessao2 {
         width: 100%;
-        min-height: 1760px; /* Garantir altura mínima */
+        min-height: 1930px; /* Garantir altura mínima */
         display: flex;
         flex-direction: column;
         background-size: cover;
@@ -402,8 +402,9 @@ footer {
     }
 
     #texto1{
-        margin-left: 5px;
-        max-width: 420px;
+        margin-left:2px ;
+        height: 400px;
+        width: 90%;
         display:block;
         margin-bottom: 300px;
     }
@@ -414,7 +415,8 @@ footer {
     }
 
     #texto2 {
-        width: 90%; 
+        width: 90% auto; 
+        height: 250px;
         margin: 20px auto; /* Centraliza o texto horizontalmente */
         font-size: 18px; /* Reduz o tamanho do texto */
         line-height: 28px; /* Ajusta o espaçamento entre linhas */
@@ -458,5 +460,16 @@ footer {
         line-height: 30px; /* Ajusta o espaçamento entre os itens */
         margin: 20px; /* Centraliza e reduz o espaçamento lateral */
     }
+    .comentario {
+        align-items: center;
+        animation: slide 80s linear infinite; /* Animação cíclica */
+    }
+    @keyframes slide {
+        0%{ transform: translateX(100%); } 
+        
+        100% { transform: translateX(-1000%); } 
+    
+    }
+
     
 }
