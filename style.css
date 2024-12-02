@@ -351,7 +351,7 @@ footer {
         height: auto;
         padding: 0 5vw;
         display: flex;
-        margin-left: -50px;
+        margin-left: -35px;
     }
 
     .linkmenu {
@@ -373,6 +373,14 @@ footer {
         font-size: 0.2 rem;
     }
 
+    #sessao1 {
+        width: 100%;
+        min-height: 50vh;
+        display: flex;
+        background-size: cover;
+        flex-direction: column;
+    }
+   
 
     #container1 {
         flex-direction: column; /* Alinha os itens verticalmente */
@@ -402,7 +410,7 @@ footer {
     }
 
     #texto1{
-        margin-left:2px ;
+        margin-left: -10px;
         height: 400px;
         width: 90%;
         display:block;
