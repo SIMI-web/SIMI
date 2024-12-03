@@ -130,8 +130,8 @@ body{
 .gender-group{
     display: flex;
     justify-content: space-between;
-    margin-top: 0.62rem;
-    padding-bottom: 2.2rem;
+    margin-top: 0.63rem;
+    padding-bottom: 2.8rem;
 }
 
 .gender.input{
