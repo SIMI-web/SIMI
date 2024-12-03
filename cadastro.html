@@ -10,11 +10,69 @@
 
     <script>
         function validateForm(event) {
-            event.preventDefault(); // Impede o envio do formulário
+
+            
             const fullname = document.getElementById('fullname').value.trim();
             const email = document.getElementById('email').value.trim();
             const number = document.getElementById('number').value.trim();
+            const birthday = document.getElementById('birthday').value.trim();
             const inscribeType = document.getElementById('inscribe-type').value;
+            const message = document.getElementById('message').value.trim();
+        
+        
+        let gender = "";
+        const genderInputs = document.getElementsByName('gender');
+        for (const input of genderInputs) {
+            if (input.checked) {
+                gender = input.id;
+                break;
+            }
+        }
+
+        // Validações
+        if (fullname === "") {
+            alert("Por favor, insira o nome completo.");
+            return false;
+        }
+
+        if (email === "" || !email.includes("@")) {
+            alert("Por favor, insira um e-mail válido.");
+            return false;
+        }
+
+        if (number === "" || !/^\(\d{2}\)\s?\d{4,5}-\d{4}$/.test(number)) {
+            alert("Por favor, insira um número de telefone no formato (XX) XXXX-XXXX.");
+            return false;
+        }
+
+        if (inscribeType === "- Selecione -") {
+            alert("Por favor, selecione um tipo de inscrição.");
+            return false;
+        }
+
+        if (gender === "") {
+            alert("Por favor, selecione um gênero.");
+            return false;
+        }
+
+        if (message === "") {
+            alert("Por favor, insira uma mensagem.");
+            return false;
+        }
+
+        // Armazena os dados em variáveis para uso posterior
+        const formData = {
+            fullname,
+            email,
+            number,
+            birthday,
+            inscribeType,
+            gender,
+            message
+        };
+
+     
+
 
             if (fullname === "") {
                 alert("Por favor, insira o nome completo.");
@@ -43,6 +101,8 @@
     </script>
 </head>
 <body>
+
+     
     <div class="container">
         <div class="form-image">
             <img src="imagens/cadastro.png">

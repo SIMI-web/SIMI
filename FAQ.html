@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+    <title>FAQ</title>
+</head>
+<body>
+    <style>
+        /* Layout geral */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f0f8ff;
+            color: #003366;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            flex: 1; /* Expande para preencher o espaço restante */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #e6f2ff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Estilos FAQ */
+        h1, h2 {
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #cce7ff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .faq-item h3:hover {
+            background-color: #b3d9ff;
+        }
+
+        .faq-item p {
+            display: none;
+            margin: 10px 0 0;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-left: 4px solid #004080;
+            border-radius: 5px;
+        }
+        .button{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+  
+<header>
+    <h1>FAQ - Sistema de Monitoramento de Idosos</h1>
+</header>
+
+<main>
+    <section>
+        <div class="faq-item">
+            <h3>1. O que é o sistema de monitoramento de idosos?</h3>
+            <p>É uma solução integrada que permite monitorar a saúde, segurança e localização de idosos em tempo real, oferecendo suporte para familiares e cuidadores.</p>
+        </div>
+        <div class="faq-item">
+            <h3>2. Como o sistema garante a privacidade dos dados?</h3>
+            <p>O sistema utiliza criptografia avançada e segue as regulamentações de proteção de dados, garantindo que as informações pessoais sejam armazenadas e transmitidas com segurança.</p>
+        </div>
+        <div class="faq-item">
+            <h3>3. Quais dispositivos são compatíveis com o sistema?</h3>
+            <p>O sistema é compatível com smartphones Android e iOS, além de smartwatches e sensores conectados.</p>
+        </div>
+        <div class="faq-item">
+            <h3>4. Como posso configurar alertas personalizados?</h3>
+            <p>Os alertas podem ser configurados no aplicativo, permitindo definir notificações para eventos específicos, como quedas ou alterações na frequência cardíaca.</p>
+        </div>
+        <div class="faq-item">
+            <h3>5. Existe suporte técnico disponível?</h3>
+            <p>Sim, oferecemos suporte técnico 24/7 via chat, e-mail e telefone.</p>
+        </div>
+        <div class="faq-item">
+            <h3>6. Posso receber notificações no meu celular?</h3>
+            <p>Sim, o sistema envia notificações diretamente para o seu smartphone, incluindo alertas de emergência, como quedas ou alterações críticas de saúde.</p>
+        </div>
+        <div class="faq-item">
+            <h3>7. O sistema emite relatórios de saúde?</h3>
+            <p>Sim, relatórios detalhados são gerados automaticamente, permitindo acompanhar a evolução da saúde do idoso e detectar padrões preocupantes.</p>
+        </div>
+        <div class="faq-item">
+            <h3>8. Como funciona o sistema de detecção de quedas?</h3>
+            <p>O sistema utiliza sensores avançados para identificar quedas. Em caso de detecção, um alerta é enviado imediatamente para os contatos cadastrados.</p>
+        </div>
+        <div class="faq-item">
+            <h3>9. O sistema funciona sem acesso à internet?</h3>
+            <p>Algumas funcionalidades, como monitoramento em tempo real, requerem internet. Porém, certos recursos podem funcionar offline, como armazenamento temporário de dados.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Sistema de Monitoramento de Idosos. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    const faqItems = document.querySelectorAll('.faq-item h3');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const content = item.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
