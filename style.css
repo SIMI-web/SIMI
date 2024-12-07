@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -169,8 +171,8 @@ section:nth-of-type(1) {
 
 
 ul {
-    list-style-type:disc; /* Define os marcadores como bolinhas */
-    padding-left: 20px; /* Espaço à esquerda para as bolinhas */
+    list-style-type:disc; 
+    padding-left: 20px; 
 }
 #sessao2 {
     width: 100%;
@@ -206,7 +208,7 @@ ul {
 }
 #container2 {
     width: 100%;
-    height: auto; /* Alterado para auto para que as divs se ajustem */
+    height: auto; 
     display: flex;
     justify-content: space-around; /* Para distribuir as divs uniformemente */
     margin: 250px 0px 0px 0px;
@@ -214,14 +216,14 @@ ul {
 }
 
 #div1, #div2, #div3 {
-    margin: 10px 0px 0px 20px; /* Margem entre as divs */
+    margin: 10px 0px 0px 20px; 
     width: 320px;
     height: 310px;
     background: linear-gradient(to bottom, transparent, #78BDF5);
     color: white;
     padding: 0px 0px 0px 0px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.096);
-    transition: background-color 1s, width 1s; /* Mover transições para cá */
+    transition: background-color 1s, width 1s; 
     justify-content: center;
 }
 
@@ -262,9 +264,9 @@ line-height: 25px;
 
 #container3 {
     width: 100%;
-    height: 400px; /* Alterado para auto para que as divs se ajustem */
+    height: 400px; 
     display: flex;
-    justify-content: space-around; /* Para distribuir as divs uniformemente */
+    justify-content: space-around; 
     margin: 50px 0px 50px 0px;
     align-items: center;
     overflow: hidden;
@@ -273,31 +275,31 @@ line-height: 25px;
 }
 
 .comentario {
-    margin: 10px 50px 0px 20px; /* Margem entre as divs */
+    margin: 10px 50px 0px 20px; 
     width: 355px;
     height: 250px;
     background-color: #2db1e6;
     color: white;
     padding: 0px 0px 0px 0px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.096);
-    transition: background-color 1s, width 1s; /* Mover transições para cá */
+    transition: background-color 1s, width 1s; 
     justify-content: center;
     text-align: center;
     padding: 60px 15px 0px 0px;
     align-items: center;
     min-width: 300px;
-    animation: slide 65s infinite; /* Animação cíclica */
+    animation: slide 65s infinite; 
 }
 
 .comentario::after {
-    content: "★★★★★"; /* Adiciona as estrelas */
-    font-size: 1.5rem; /* Tamanho das estrelas */
+    content: "★★★★★"; 
+    font-size: 1.5rem; 
     color: #000ba0; 
     letter-spacing: 5px; 
     position: absolute;
     top: 15px; 
     left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
+    transform: translateX(-50%); 
 }
 
 
@@ -359,7 +361,7 @@ footer {
     }
 
     #logomenu {
-        width: 0dvw;  /* Ajuste da logo para telas pequenas */
+        width: 0dvw;  
     }
 
     #menu {
@@ -398,31 +400,30 @@ footer {
    
 
     #container1 {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        margin: 30px 0; /* Reduz a margem superior e inferior */
+        flex-direction: column; 
+        margin: 30px 0; 
         
     }
 
     #lista, #lista2 {
-        width: 80%; /* Ajusta a largura para caber na tela */
-        margin: 20px auto; /* Centraliza os itens e reduz margens */
-        height: auto; /* Permite que a altura se ajuste ao conteúdo */
-        
+        width: 80%; 
+        margin: 20px auto; 
+        height: auto; 
     }
 
     #lista h2, #lista2 h2 {
-        font-size: 24px; /* Reduz o tamanho do título */
-        margin: 10px 0; /* Ajusta as margens */
+        font-size: 24px; 
+        margin: 10px 0; 
     }
     #sessao2 {
         width: 100%;
-        min-height: 1930px; /* Garantir altura mínima */
+        min-height: 1930px; 
         display: flex;
         flex-direction: column;
         background-size: cover;
         margin: 0;
         box-shadow: rgba(0, 0, 0, 0.11) 10px 9px 10px 7px;
-        overflow: hidden; /* Garante que nada ultrapasse a sessão */
+        overflow: hidden; 
     }
 
     #texto1{
@@ -434,36 +435,35 @@ footer {
     }
     #sobre {
         padding: 20px 10px;
-        font-size: 32px; /* Reduz o tamanho do texto */
-        text-align: center; /* Centraliza o texto */
-    }
+        font-size: 32px; 
+        text-align: center;
 
     #texto2 {
         width: 90% auto; 
         height: 250px;
-        margin: 20px auto; /* Centraliza o texto horizontalmente */
-        font-size: 18px; /* Reduz o tamanho do texto */
-        line-height: 28px; /* Ajusta o espaçamento entre linhas */
-        text-align: justify; /* Centraliza o texto */
+        margin: 20px auto; 
+        font-size: 18px;
+        line-height: 28px; 
+        text-align: justify;
         margin-bottom: 720px;
        
     }
 
     #container2 {
-        flex-direction: column; /* Alinha os elementos verticalmente */
-        margin: 50px 0; /* Reduz o espaçamento entre os elementos */
+        flex-direction: column; 
+        margin: 50px 0; 
         
     }
 
     #div1, #div2, #div3 {
-        width: 90%; /* Ajusta a largura para caber na tela */
-        height: auto; /* Permite que a altura se ajuste ao conteúdo */
-        margin: 20px auto; /* Centraliza as divs na tela */
+        width: 90%; 
+        height: auto; 
+        margin: 20px auto; 
         padding-bottom: 5px;
     }
 
     #div1 h3, #div2 h3, #div3 h3 {
-        font-size: 24px; /* Ajusta o tamanho do texto */
+        font-size: 24px; 
         margin: 5px 0;
     }
 
@@ -474,19 +474,19 @@ footer {
     }
     
     .textodiv {
-        max-width: 80%; /* Ocupa a largura total disponível */
-        font-size: 16px; /* Reduz o tamanho da fonte */
-        line-height: 24px; /* Ajusta o espaçamento */
+        max-width: 80%; 
+        font-size: 16px; 
+        line-height: 24px; 
     }
 
     #valores {
-        font-size: 16px; /* Diminui o tamanho do texto */
-        line-height: 30px; /* Ajusta o espaçamento entre os itens */
-        margin: 20px; /* Centraliza e reduz o espaçamento lateral */
+        font-size: 16px; 
+        line-height: 30px;
+        margin: 20px; 
     }
     .comentario {
         align-items: center;
-        animation: slide 80s linear infinite; /* Animação cíclica */
+        animation: slide 80s linear infinite; 
     }
     @keyframes slide {
         0%{ transform: translateX(100%); } 
@@ -510,4 +510,5 @@ footer {
     }
 
     
+    }
 }

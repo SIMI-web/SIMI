@@ -29,38 +29,8 @@
             }
         }
 
-        // Validações
-        if (fullname === "") {
-            alert("Por favor, insira o nome completo.");
-            return false;
-        }
 
-        if (email === "" || !email.includes("@")) {
-            alert("Por favor, insira um e-mail válido.");
-            return false;
-        }
-
-        if (number === "" || !/^\(\d{2}\)\s?\d{4,5}-\d{4}$/.test(number)) {
-            alert("Por favor, insira um número de telefone no formato (XX) XXXX-XXXX.");
-            return false;
-        }
-
-        if (inscribeType === "- Selecione -") {
-            alert("Por favor, selecione um tipo de inscrição.");
-            return false;
-        }
-
-        if (gender === "") {
-            alert("Por favor, selecione um gênero.");
-            return false;
-        }
-
-        if (message === "") {
-            alert("Por favor, insira uma mensagem.");
-            return false;
-        }
-
-        // Armazena os dados em variáveis para uso posterior
+        // Armazena os dados em variáveis 
         const formData = {
             fullname,
             email,
